@@ -1,0 +1,26 @@
+* {
+    border: 1px solid black;
+}
+
+body  {
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+main > div {
+    width: 33vw;
+    height: 100vh;
+}
+
+.divImagemCentral img {
+    width: 100%;
+}
+
+.cardUpgrade {
+    display: flex;
+    flex-direction: row;
+}
