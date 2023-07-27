@@ -1,26 +1,30 @@
-* {
-    border: 1px solid black;
+@font-face {
+  font-family: "Pixellari";
+  src: url(../fonts/Pixellari.ttf) format("truetype");
 }
 
-body  {
-    height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Pixellari", sans-serif;
 }
 
 main {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
-main > div {
-    width: 33vw;
-    height: 100vh;
+.div {
+  width: calc(100vw / 3);
+  height: 100vh;
 }
 
+/*depois passar para um arquivo a parte*/
 .divImagemCentral img {
-    width: 100%;
-}
-
-.cardUpgrade {
-    display: flex;
-    flex-direction: row;
+  width: 100%;
 }

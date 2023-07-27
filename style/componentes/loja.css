@@ -1,0 +1,39 @@
+.divLoja {
+  border: 5px solid #552e0e;
+  background-color: #2e2e2e;
+  padding-top: 40px;
+
+  color: #fff;
+}
+
+.divLoja > h1 {
+  text-align: center;
+  font-size: 40px;
+  font-variant: small-caps;
+}
+
+.divUpgrades {
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding: 5px;
+}
+
+.cardUpgrade {
+  height: 100px;
+  width: 100%;
+  margin: 20px 0px;
+  padding: 5px;
+
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: center;
+
+  border: 2px solid #141414;
+}
+
+.cardUpgrade img {
+  height: 100%;
+}
