@@ -24,6 +24,12 @@ main {
   height: 100vh;
 }
 
+.divCentral {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 /*depois passar para um arquivo a parte*/
 .divImagemCentral img {
   width: 100%;
