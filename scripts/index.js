@@ -19,10 +19,10 @@ let valorUp2 = 15;
 let valorUp3 = 25;
 let valorUp4 = 50;
 
-valorUp1Display.innerHTML = valorUp1;
-valorUp2Display.innerHTML = valorUp2;
-valorUp3Display.innerHTML = valorUp3;
-valorUp4Display.innerHTML = valorUp4;
+valorUp1Display.innerText = valorUp1;
+valorUp2Display.innerText = valorUp2;
+valorUp3Display.innerText = valorUp3;
+valorUp4Display.innerText = valorUp4;
 
 //evento de compra do upgrade + acrescimo do valor no click
 let upgrades = document.querySelectorAll(".cardUpgrade");
@@ -58,7 +58,7 @@ upgrades.forEach((upgrade) => {
       }
     }
 
-    moedasDisplay.innerHTML = moeda.toFixed(1);
+    moedasDisplay.innerText = moeda.toFixed(1);
   });
 });
 
@@ -86,13 +86,13 @@ function contadorDeSegundo() {
   moeda += 0.1; //adiciona 0.1 moeda a cada 1s
   formatar();
   horaDisplay.innerHTML = tempoFormatado;
-  moedasDisplay.innerHTML = moeda.toFixed(1);
+  moedasDisplay.innerText = moeda.toFixed(1);
 }
 let intervalo = setInterval(contadorDeSegundo, 1000); //faz com que a função seja executada a cada mil milissegundo (1s)
 
 //evento de click + alteração do valor
 horaDisplay.innerHTML = tempoFormatado;
-moedasDisplay.innerHTML = moeda;
+moedasDisplay.innerText = moeda;
 clickZone.addEventListener("click", () => {
   hora += clickValue;
   formatar();
@@ -104,5 +104,5 @@ clickZone.addEventListener("click", () => {
   }
 
   coinCalculate();
-  moedasDisplay.innerHTML = moeda.toFixed(1);
+  moedasDisplay.innerText = moeda.toFixed(1);
 });
