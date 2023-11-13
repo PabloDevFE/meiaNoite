@@ -34,3 +34,13 @@ main {
 .divImagemCentral img {
   width: 100%;
 }
+
+.divMoedas {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+.divMoedas > img {
+  width: 15px;
+}
