@@ -2,7 +2,7 @@ let horaDisplay = document.querySelector("#hora");
 let hora = 0;
 
 let moedasDisplay = document.querySelector("#moedas");
-let moeda = 0;
+let moeda = 10000;
 
 let clickZone = document.querySelector("#imgCenter");
 
@@ -28,36 +28,25 @@ valorUp4Display.innerText = valorUp4;
 let upgrades = document.querySelectorAll(".cardUpgrade");
 upgrades.forEach((upgrade) => {
   upgrade.addEventListener("click", () => {
-    if (upgrade.id == "upgrade1") {
-      if (moeda >= valorUp1) {
-        moeda -= valorUp1; //moedas são subtraidas
-        valorUp1 *= 1.2; //valor é multiplicado
-        clickValue += 1; //valor do click é aumentado
-        valorUp1Display.innerHTML = valorUp1.toFixed(1);
-      }
-    } else if (upgrade.id == "upgrade2") {
-      if (moeda >= valorUp2) {
-        moeda -= valorUp2;
-        valorUp2 *= 1.3;
-        clickValue += 3;
-        valorUp2Display.innerHTML = valorUp2.toFixed(1);
-      }
-    } else if (upgrade.id == "upgrade3") {
-      if (moeda >= valorUp3) {
-        moeda -= valorUp3;
-        valorUp3 *= 1.4;
-        clickValue += 5;
-        valorUp3Display.innerHTML = valorUp3.toFixed(1);
-      }
-    } else if (upgrade.id == "upgrade4") {
-      if (moeda >= valorUp4) {
-        moeda -= valorUp4;
-        valorUp4 *= 1.5;
-        clickValue += 10;
-        valorUp4Display.innerHTML = valorUp4.toFixed(1);
+    function purchase(a, b, c ) {
+      if (moeda >= a) {
+        moeda -= a; //moedas são subtraidas 
+        a *= 1.2  //valor é multiplicado
+        clickValue += c;  //valor do click é aumentado     
+        b.innerHTML = a.toFixed(1); 
+        return a
       }
     }
 
+    if (upgrade.id == "upgrade1") {
+      valorUp1 = purchase(valorUp1, valorUp1Display,1)
+    } else if (upgrade.id == "upgrade2") {
+      valorUp2 = purchase(valorUp2, valorUp2Display,3)
+    } else if (upgrade.id == "upgrade3") {
+      valorUp3 = purchase(valorUp3, valorUp3Display, 5)
+    } else if (upgrade.id == "upgrade4") {
+      valorUp4 = purchase(valorUp4, valorUp4Display,10)
+    }
     moedasDisplay.innerText = moeda.toFixed(1);
   });
 });
