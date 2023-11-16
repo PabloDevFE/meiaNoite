@@ -2,7 +2,7 @@ let horaDisplay = document.querySelector("#hora");
 let hora = 0;
 
 let moedasDisplay = document.querySelector("#moedas");
-let moeda = 10000;
+let moeda = 10;
 
 let clickZone = document.querySelector("#imgCenter");
 
@@ -43,7 +43,7 @@ upgrades.forEach((upgrade) => {
     } else if (upgrade.id == "upgrade2") {
       valorUp2 = purchase(valorUp2, valorUp2Display,3)
     } else if (upgrade.id == "upgrade3") {
-      valorUp3 = purchase(valorUp3, valorUp3Display, 5)
+      valorUp3 = purchase(valorUp3, valorUp3Display,5)
     } else if (upgrade.id == "upgrade4") {
       valorUp4 = purchase(valorUp4, valorUp4Display,10)
     }

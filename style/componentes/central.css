@@ -1,0 +1,76 @@
+.divCentral {
+    position: relative;
+}
+
+.divMoedas {
+    background-color: #303030;
+    color: #fff;
+    border: 5px solid #D27D2C;
+    outline: 1px solid black;
+    position: absolute;
+    top: 20px;
+
+    font-size: 1.5rem;
+    min-width: 100px;
+    height: 50px;
+    padding: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.divMoedas > img { 
+    height: 30px;
+}
+
+.divMoedas > p { 
+    font-family: var(--texto);
+    vertical-align: middle;
+}
+
+.divHoras {
+    position: absolute;
+    top: 80px;
+    font-size: 1.6rem;
+    font-family: var(--texto);
+
+    background-color: #303030;
+    color: #fff;
+    border: 5px solid #D27D2C;
+    outline: 1px solid black;
+    padding: 10px;
+     
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divImagemCentral img {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+}
+
+.divMensagem {
+    font-family: var(--texto);
+    width: 80%;
+    z-index: 99;
+    background-color: #fff;
+    padding: 15px;
+    border: 4px solid black;
+    position: relative;
+}
+
+.divMensagem::after {
+    content: '';
+    width: 100px;
+    height: 60px;
+    position: absolute;
+    background-color: #000000;
+    clip-path: polygon(90% 0, 0 0, 100% 100%);
+    bottom: -60px;
+    left: 0;
+}

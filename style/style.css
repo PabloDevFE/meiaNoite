@@ -1,27 +1,53 @@
 @font-face {
-  font-family: "Pixellari";
-  src: url(../fonts/Pixellari.ttf) format("truetype");
+  font-family: "Vcr";
+  src: url(../fonts/VCR_OSD_MONO_1.001.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Daydream";
+  src: url(../fonts/Daydream.ttf) format("truetype");
+}
+
+:root {
+  --titulo: "Daydream", sans-serif;
+  --texto: "Vcr", sans-serif;
 }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;  
+  -webkit-user-select:none;  
+  -moz-user-select:none;     
+  -ms-user-select:none;      
+  user-select:none;  
+}
+
+.hide {
+  display: none;
 }
 
 body {
   height: 100vh;
-  font-family: "Pixellari", sans-serif;
+  font-family: sans-serif;
 }
 
 main {
   display: flex;
+  gap: 1px;
+  padding: 1px 1px 0px 1px;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .div {
   width: calc(100vw / 3);
-  height: 100vh;
+  height: calc(100vh - 2px);
+  border: 5px solid #D27D2C;
+  outline: 1px solid black;
+  box-shadow: inset 2px 2px 0px #000000, inset -2px -2px 0px #000000;
+  background-color: #4e4a4e;
 }
 
 .divCentral {
@@ -29,18 +55,4 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-/*depois passar para um arquivo a parte*/
-.divImagemCentral img {
-  width: 100%;
-}
-
-.divMoedas {
-  display: flex; 
-  align-items: center;
-  justify-content: center;
-}
-
-.divMoedas > img {
-  width: 15px;
 }

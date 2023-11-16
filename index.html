@@ -6,6 +6,7 @@
     <title>Meia noite te conto - O jogo</title>
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/componentes/loja.css" />
+    <link rel="stylesheet" href="style/componentes/central.css">
   </head>
   <body>
     <main class="main">
@@ -13,7 +14,7 @@
 
       <div class="div divCentral">
         <div class="divMoedas">
-          <img src="midias/Gold-Coin.svg" alt="">
+          <img src="midias/coin.png" alt="">
           <p id="moedas"></p>
         </div>
 
@@ -21,11 +22,16 @@
           <h1 id="hora"></h1>
         </div>
 
+        <div class="divMensagem hide">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat eos error dolore vero corporis dicta quas!</p>
+        </div>
+
         <div class="divImagemCentral">
           <img
             src="midias/caveira.png"
             alt=""
             id="imgCenter"
+            draggable="false"
           />
         </div>
       </div>
