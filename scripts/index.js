@@ -2,7 +2,7 @@ let horaDisplay = document.querySelector("#hora");
 let hora = 0;
 
 let moedasDisplay = document.querySelector("#moedas");
-let moeda = 10;
+let moeda = 0;
 
 let clickZone = document.querySelector("#imgCenter");
 
@@ -34,6 +34,9 @@ upgrades.forEach((upgrade) => {
         a *= 1.2  //valor é multiplicado
         clickValue += c;  //valor do click é aumentado     
         b.innerHTML = a.toFixed(1); 
+        console.log(a)
+        return a
+      } else {
         return a
       }
     }
