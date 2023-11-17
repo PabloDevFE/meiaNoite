@@ -19,25 +19,24 @@ let valorUp2 = 15;
 let valorUp3 = 25;
 let valorUp4 = 50;
 
-valorUp1Display.innerText = valorUp1;
-valorUp2Display.innerText = valorUp2;
-valorUp3Display.innerText = valorUp3;
-valorUp4Display.innerText = valorUp4;
+  valorUp1Display.innerText = valorUp1;
+  valorUp2Display.innerText = valorUp2;
+  valorUp3Display.innerText = valorUp3;
+  valorUp4Display.innerText = valorUp4;
 
 //evento de compra do upgrade + acrescimo do valor no click
 let upgrades = document.querySelectorAll(".cardUpgrade");
 upgrades.forEach((upgrade) => {
   upgrade.addEventListener("click", () => {
-    function purchase(a, b, c ) {
-      if (moeda >= a) {
-        moeda -= a; //moedas são subtraidas 
-        a *= 1.2  //valor é multiplicado
-        clickValue += c;  //valor do click é aumentado     
-        b.innerHTML = a.toFixed(1); 
-        console.log(a)
-        return a
+    function purchase(valorUp, display, up) {
+      if (moeda >= valorUp) {
+        moeda -= valorUp; //moedas são subtraidas 
+        valorUp *= 1.2  //valor é multiplicado
+        clickValue += up;  //valor do click é aumentado     
+        display.innerHTML = valorUp.toFixed(1); 
+        return valorUp
       } else {
-        return a
+        return valorUp
       }
     }
 

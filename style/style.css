@@ -44,10 +44,10 @@ main {
 .div {
   width: calc(100vw / 3);
   height: calc(100vh - 2px);
-  border: 5px solid #D27D2C;
+  border: 5px solid hsl(29, 65%, 30%);
   outline: 1px solid black;
   box-shadow: inset 2px 2px 0px #000000, inset -2px -2px 0px #000000;
-  background-color: #4e4a4e;
+  background-color: #181818;
 }
 
 .divCentral {
