@@ -1,5 +1,5 @@
 let horaDisplay = document.querySelector("#hora");
-let hora = 0;
+let hora = 7200;
 
 let moedasDisplay = document.querySelector("#moedas");
 let moeda = 0;
@@ -78,6 +78,7 @@ function contadorDeSegundo() {
   formatar();
   horaDisplay.innerHTML = tempoFormatado;
   moedasDisplay.innerText = moeda.toFixed(1);
+  verificarHoras()
 }
 let intervalo = setInterval(contadorDeSegundo, 1000); //faz com que a função seja executada a cada mil milissegundo (1s)
 
@@ -97,3 +98,18 @@ clickZone.addEventListener("click", () => {
   coinCalculate();
   moedasDisplay.innerText = moeda.toFixed(1);
 });
+
+
+// trocar o bg de acordo com as horas
+function verificarHoras() {
+  let divCentral = document.querySelector("#divCentral")
+  if (hora >= 14400 && hora <= 21600) {
+    divCentral.style.backgroundImage = 'url(../../midias/landscape-transicao.jpg)' 
+  } else if (hora >= 21601 && hora <= 57600) {
+    divCentral.style.backgroundImage = 'url(../../midias/landscape-dia.jpg)' 
+  } else if (hora >= 57601 && hora <= 64800) {
+    divCentral.style.backgroundImage = 'url(../../midias/landscape-transicao.jpg)' 
+  }  else if (hora >= 64800) {
+    divCentral.style.backgroundImage = 'url(../../midias/landscape-noite.jpg)' 
+  }
+}
