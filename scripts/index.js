@@ -113,3 +113,31 @@ function verificarHoras() {
     divCentral.style.backgroundImage = 'url(../../midias/landscape-noite.jpg)' 
   }
 }
+
+//evento de mensagens da caveira central 
+function exibirMensagem(mensagem) {
+  const mensagemDisplay = document.querySelector("#divMensagem") 
+  mensagemDisplay.classList.remove("hide")
+  mensagemDisplay.innerText = mensagem
+
+  setInterval(esconderMensagem, 10000)
+    function esconderMensagem() {
+      mensagemDisplay.classList.add("hide")
+    }
+  return true
+}
+
+function timeMensagens() {
+    //verificar a hora para exibir a mensagem no momento certo
+      switch(true) {
+        case hora > 3600 && hora < 3700:
+          exibirMensagem("As três todas as caveiras jogam xadrez")
+          break;
+          case hora > 7200 && hora < 7300:
+            exibirMensagem("As três todas as caveiras jogam dama")
+            break;
+            
+          }
+}
+
+setInterval(timeMensagens, 10)
