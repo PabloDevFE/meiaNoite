@@ -127,17 +127,15 @@ function exibirMensagem(mensagem) {
   return true
 }
 
+let vezesHora = 0
 function timeMensagens() {
-    //verificar a hora para exibir a mensagem no momento certo
-      switch(true) {
-        case hora > 3600 && hora < 3700:
-          exibirMensagem("As três todas as caveiras jogam xadrez")
-          break;
-          case hora > 7200 && hora < 7300:
-            exibirMensagem("As três todas as caveiras jogam dama")
-            break;
-            
-          }
+  //7200 = hora em que inicia o jogo (2h)
+  if (hora >= 7200 &&  vezesHora == 0) {
+    exibirMensagem("as dsai")
+    vezesHora++
+  }
+
+
 }
 
 setInterval(timeMensagens, 10)
